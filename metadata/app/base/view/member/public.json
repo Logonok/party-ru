@@ -1,0 +1,11 @@
+{
+  "label": "Публичные участники",
+  "description": "Представление участника для гостевого доступа",
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 20
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+
+<div class="page" data-page="member" data-handler="MemberPage">
+
+    <div class="member loadable-container" data-handler="Member">
+
+        <template data-id="member">
+            <div class="page-head">
+                <ol class="breadcrumb">
+                    <li><a href="#" data-action="main" data-t="">Домой</a></li>
+                    <li data-t="">Участник</li>
+                </ol>
+            </div>
+
+            <h1>{{name}}</h1>
+
+            <div class="tabs form-tabs mt40" data-id="tabs">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-tab active" data-id="toasts">
+                        <a href="#" data-t="">Тосты</a>
+                    </li>
+                    <li class="nav-tab" data-id="friends">
+                        <a href="#" data-t="">Друзья</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div class="form-base-group tab-pane active" data-id="toasts">
+                        <%- include('./_memberToasts') %>
+                    </div>
+                    <div class="form-base-group tab-pane" data-id="friends">
+                        <%- include('./_memberFriends') %>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template data-id="error">
+            <div class="alert-danger alert">{{text}}</div>
+        </template>
+
+        <div class="loadable-content"></div>
+        <div class="loader"><i class="fa fa-spinner fa-spin"></i></div>
+    </div>
+</div>

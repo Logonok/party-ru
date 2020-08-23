@@ -1,0 +1,157 @@
+{
+  "abstract": false,
+  "description": "Определяет состояние дружбы между участниками",
+  "label": "Друг",
+  "attrs": [
+    {
+      "name": "_state",
+      "label": "Состояние",
+      "type": "string",
+      "viewType": "state",
+      "description": "Системный атрибут состояния объекта",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": true,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "inviter",
+      "label": "Приглашающий",
+      "type": "ref",
+      "description": "Участник приглашающий дружить. По умолчанию тот, кто создает объект",
+      "commands": [
+        "add",
+        "remove",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": "$user.meta.base.member",
+      "eagerLoading": true,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "null",
+      "orderNumber": 20,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "member",
+      "readOnly": true,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "invitee",
+      "label": "Приглашаемый",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "description": "Участник приглашаемый дружить",
+      "commands": [
+        "add",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "eagerLoading": true,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "null",
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "member",
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false,
+      "rules": [
+        {
+          "type": "condition",
+          "orderNumber": 20,
+          "description": "Приглашаемый не должен быть приглашающим",
+          "message": "Приглашаемый не должен быть приглашающим",
+          "condition": [
+            "$!=",
+            ".inviter",
+            ".invitee"
+          ]
+        },
+        {
+          "type": "custom",
+          "orderNumber": 30,
+          "description": "Проверить приглашен ли уже участник",
+          "config": {
+            "Class": "component/meta/validator/FriendValidator",
+            "message": "Друг уже существует"
+          }
+        }
+      ]
+    }
+  ],
+  "states": [
+    {
+      "name": "pending",
+      "label": "Ожидание",
+      "defaults": true,
+      "description": "Ожидание решения приглашенного участника. Состояние по умолчанию после создания объекта",
+      "readOnly": true
+    },
+    {
+      "name": "accepted",
+      "label": "Принято",
+      "defaults": false,
+      "description": "Дружбы принята приглашенным участником",
+      "readOnly": true
+    },
+    {
+      "name": "declined",
+      "label": "Отклонено",
+      "defaults": false,
+      "description": "Дружба отклонена приглашенным участником",
+      "readOnly": true
+    }
+  ],
+  "transitions": [
+    {
+      "name": "accept",
+      "label": "Принять дружбу",
+      "description": "Приглашаемый принимает дружбу от приглашающего участника",
+      "nullStartState": false,
+      "startStates": [
+        "pending",
+        "declined"
+      ],
+      "finalState": "accepted",
+      "orderNumber": 10
+    },
+    {
+      "name": "decline",
+      "label": "Отклонить дружбу",
+      "description": "Приглашаемый отклоняет дружбу от приглашающего участника",
+      "nullStartState": false,
+      "startStates": [
+        "pending",
+        "accepted"
+      ],
+      "finalState": "declined",
+      "orderNumber": 20
+    }
+  ]
+}

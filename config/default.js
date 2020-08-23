@@ -2,22 +2,22 @@
 
 module.exports = {
 
-    title: 'Boilerplate',
+    title: 'Party',
 
     components: {
         'db': {
             settings: {
-                'database': process.env.MONGO_NAME || 'evado-boilerplate',
+                'database': process.env.MONGO_NAME || 'logonok-party-ru',
             }
         },
         'cookie': {
-            secret: 'boilerplate.evado'
+            secret: 'party-ru.logonok'
         },
         'session': {
-            secret: 'boilerplate.evado'
+            secret: 'party-ru.logonok'
         },
         'i18n': {
-            // language: 'ru'
+            language: 'ru'
         },
         'router': {
             // defaultModule: 'front'
@@ -58,6 +58,9 @@ module.exports = {
             params: {
                 separateNextCommonMenuItem: true
             }
+        },
+        'front': {
+            Class: require('../module/front/Module')
         }
     },
     users: require('./default-users'),
@@ -70,7 +73,7 @@ module.exports = {
     listeners: require('./default-listeners'),
     params: {
         'enablePasswordReset': false,
-        'enableSignUp': false,
+        'enableSignUp': true,
         'enableSignUpVerification': false
     }
 };

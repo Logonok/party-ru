@@ -1,0 +1,25 @@
+{
+  "label": "Боковое меню",
+  "description": "Боковое меню",
+  "nodes": [
+    {
+      "name": "toasts",
+      "label": "Тосты",
+      "orderNumber": 10,
+      "class": "toast"
+    },
+    {
+      "name": "members",
+      "label": "Участники",
+      "orderNumber": 20,
+      "class": "member"
+    },
+    {
+      "name": "myMember",
+      "label": "Мой участник",
+      "orderNumber": 30,
+      "class": "member",
+      "view": "userMember"
+    }
+  ]
+}

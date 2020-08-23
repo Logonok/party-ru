@@ -1,0 +1,33 @@
+
+<div class="comment-list loadable-container" data-handler="ToastCommentList" data-toast="{{_id}}">
+
+    <template data-id="list">
+        <div class="comment-items">##items##</div>
+    </template>
+
+    <template data-id="item">
+        <div class="comment-card" data-id="##_id##">
+            <a href="#" data-action="member" data-id="##authorId##" class="comment-author">
+                <span class="icon fa fa-user"></span>
+                ##authorTitle##
+            </a>
+            <div class="comment-date">##date##</div>
+            <div class="comment-text">##text##</div>
+        </div>
+    </template>
+
+    <%- include('./_pagination', {start: '##', end: '##'}) %>
+
+    <template data-id="empty">
+        <div class="alert-warning alert">
+            <span data-t="">Комментарии отсутствуют</span>
+        </div>
+    </template>
+
+    <template data-id="error">
+        <div class="alert-danger alert">##text##</div>
+    </template>
+
+    <div class="loadable-content"></div>
+    <div class="loader"><i class="fa fa-spinner fa-spin"></i></div>
+</div>

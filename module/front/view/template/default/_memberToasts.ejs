@@ -1,0 +1,35 @@
+
+<div class="toast-list loadable-container" data-handler="MemberToastList" data-member="{{_id}}">
+
+    <template data-id="list">
+        <div class="toast-items">##items##</div>
+    </template>
+
+    <template data-id="item">
+        <div class="toast-card" data-id="##_id##">
+            <div class="toast-title">
+                <span class="glyphicon glyphicon-glass text-info"></span>
+                <a href="#" data-action="toast">##title##</a>
+            </div>
+        </div>
+    </template>
+
+    <%- include('./_pagination', {start: '##', end: '##'}) %>
+
+    <template data-id="empty">
+        <div class="alert-warning alert">
+            <span data-t="">Нет тостов</span>
+        </div>
+    </template>
+
+    <template data-id="warning">
+        <div class="alert-warning alert">##text##</div>
+    </template>
+
+    <template data-id="error">
+        <div class="alert-danger alert">##text##</div>
+    </template>
+
+    <div class="loadable-content"></div>
+    <div class="loader"><i class="fa fa-spinner fa-spin"></i></div>
+</div>

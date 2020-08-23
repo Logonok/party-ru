@@ -1,0 +1,24 @@
+{
+  "label": "Публичные тосты",
+  "description": "Представление тоста для гостевого доступа",
+  "filter": {
+    "access": "all"
+  },
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "title",
+      "orderNumber": 10
+    },
+    {
+      "name": "content",
+      "orderNumber": 20
+    },
+    {
+      "name": "author",
+      "eagerLoading": true,
+      "eagerView": "public",
+      "orderNumber": 30
+    }
+  ]
+}

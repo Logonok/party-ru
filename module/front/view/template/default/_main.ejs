@@ -1,0 +1,37 @@
+
+<div class="page" data-page="main" data-handler="MainPage">
+
+    <h1 data-t="">Тосты</h1>
+
+    <div class="toast-list loadable-container" data-handler="ToastList">
+
+        <template data-id="list">
+            <div class="row">{{items}}</div>
+        </template>
+
+        <template data-id="item">
+            <div class="col-sm-6 col-lg-4">
+                <div class="toast-card" data-id="{{_id}}">
+                    <h3><a href="#" data-action="toast">{{title}}</a></h3>
+                    <h4>
+                        <span data-t="">Автор:</span>
+                        <b>{{authorTitle}}</b>
+                    </h4>
+                </div>
+            </div>
+        </template>
+
+        <%- include('./_pagination') %>
+
+        <template data-id="warning">
+            <div class="alert-warning alert">{{text}}</div>
+        </template>
+
+        <template data-id="error">
+            <div class="alert-danger alert">{{text}}</div>
+        </template>
+
+        <div class="loadable-content"></div>
+        <div class="loader"><i class="fa fa-spinner fa-spin"></i></div>
+    </div>
+</div>

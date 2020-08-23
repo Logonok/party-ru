@@ -1,18 +1,18 @@
-# Evado Boilerplate App
+# Evado Party App
 
-Lightweight and feature-rich template for rapid building web applications.
+Демонстрационное веб-приложение социальной сети,
+созданное на фреймворке Evado.
 
-- [Evado Framework](https://github.com/mkhorin/evado)
-- [Step-by-step tutorial](http://nervebit.com)
+- [Декларативный фреймворк Evado](https://github.com/mkhorin/evado)
 
-## Installation
+## Установка
 
-#### Install environment
+#### Установите окружение
 - [Node.js](https://nodejs.org)
 - [MongoDB](https://www.mongodb.com/download-center/community)
 
 #### Linux
-Clone application to /app
+Клонируйте приложение в /app
 ```sh
 cd /app
 npm install
@@ -20,7 +20,7 @@ NODE_ENV=development node console/install
 ```
 
 #### Windows
-Clone application to c:/app
+Клонируйте приложение в c:/app
 ```sh
 cd c:/app
 npm install
@@ -28,7 +28,7 @@ set NODE_ENV=development
 node console/install
 ```
 
-## Start app
+## Запуск
 
 #### Linux
 ```sh
@@ -43,11 +43,15 @@ set NODE_ENV=development
 node console/start
 ```
  
-http://localhost:3000
+Веб-интерфейс: **http://localhost:3000**
+
+Войти как администратор:
 ```sh
 Email: a@a.a
 Password: 123456
 ```
-
-## Tutorial
-- [Build App Without Coding](http://nervebit.com)
+Войти как участник:
+```sh
+Email: b@b.b
+Password: 123456
+```

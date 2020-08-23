@@ -1,0 +1,90 @@
+[
+  {
+    "_id": {
+      "$oid": "5f3b6b5c520296397c9accfa"
+    },
+    "_class": "member",
+    "_creator": {
+      "$oid": "5f3b6b5c520296397c9accf8"
+    },
+    "name": "Боб",
+    "user": {
+      "$oid": "5f3b6b5c520296397c9accf8"
+    },
+    "_createdAt": {
+      "$date": "2020-08-18T05:47:08.178Z"
+    },
+    "_editor": {
+      "$oid": "5f39e6dbaa22712e988ae6b8"
+    },
+    "_updatedAt": {
+      "$date": "2020-08-18T08:18:04.863Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f3b6b72520296397c9accfe"
+    },
+    "_class": "member",
+    "_creator": {
+      "$oid": "5f3b6b72520296397c9accfc"
+    },
+    "name": "Сара",
+    "user": {
+      "$oid": "5f3b6b72520296397c9accfc"
+    },
+    "_createdAt": {
+      "$date": "2020-08-18T05:47:30.825Z"
+    },
+    "_editor": {
+      "$oid": "5f3b6b72520296397c9accfc"
+    },
+    "_updatedAt": {
+      "$date": "2020-08-19T05:25:30.345Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f3b70c7520296397c9acd0f"
+    },
+    "_class": "member",
+    "_creator": {
+      "$oid": "5f3b70c7520296397c9acd0d"
+    },
+    "name": "Том",
+    "user": {
+      "$oid": "5f3b70c7520296397c9acd0d"
+    },
+    "_createdAt": {
+      "$date": "2020-08-18T06:10:15.036Z"
+    },
+    "_editor": {
+      "$oid": "5f3b70c7520296397c9acd0d"
+    },
+    "_updatedAt": {
+      "$date": "2020-08-19T05:45:00.635Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "5f3b8f182b501a2c7044f238"
+    },
+    "_class": "member",
+    "_creator": {
+      "$oid": "5f3b8f182b501a2c7044f236"
+    },
+    "name": "Денис",
+    "user": {
+      "$oid": "5f3b8f182b501a2c7044f236"
+    },
+    "_createdAt": {
+      "$date": "2020-08-18T08:19:36.677Z"
+    },
+    "_editor": {
+      "$oid": "5f3b8f182b501a2c7044f236"
+    },
+    "_updatedAt": {
+      "$date": "2020-08-19T05:50:37.286Z"
+    }
+  }
+]

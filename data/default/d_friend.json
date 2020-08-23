@@ -1,0 +1,106 @@
+[
+  {
+    "_id": {
+      "$oid": "5f3b778c4b3168248cb22e21"
+    },
+    "_class": "friend",
+    "_creator": {
+      "$oid": "5f3b6b5c520296397c9accf8"
+    },
+    "inviter": {
+      "$oid": "5f3b6b5c520296397c9accfa"
+    },
+    "invitee": {
+      "$oid": "5f3b6b72520296397c9accfe"
+    },
+    "_state": "accepted",
+    "_createdAt": {
+      "$date": "2020-08-18T06:39:08.565Z"
+    },
+    "_editor": {
+      "$oid": "5f3b6b5c520296397c9accf8"
+    },
+    "_updatedAt": {
+      "$date": "2020-08-18T06:39:21.333Z"
+    },
+    "_transiting": null
+  },
+  {
+    "_id": {
+      "$oid": "5f3cb6f0fdcb98193cd1dc36"
+    },
+    "_class": "friend",
+    "_creator": {
+      "$oid": "5f3b6b72520296397c9accfc"
+    },
+    "inviter": {
+      "$oid": "5f3b6b72520296397c9accfe"
+    },
+    "invitee": {
+      "$oid": "5f3b70c7520296397c9acd0f"
+    },
+    "_state": "accepted",
+    "_createdAt": {
+      "$date": "2020-08-19T05:21:52.832Z"
+    },
+    "_editor": {
+      "$oid": "5f3b6b72520296397c9accfc"
+    },
+    "_updatedAt": {
+      "$date": "2020-08-19T05:21:57.441Z"
+    },
+    "_transiting": null
+  },
+  {
+    "_id": {
+      "$oid": "5f3cb810fdcb98193cd1dc39"
+    },
+    "_class": "friend",
+    "_creator": {
+      "$oid": "5f3b70c7520296397c9acd0d"
+    },
+    "inviter": {
+      "$oid": "5f3b70c7520296397c9acd0f"
+    },
+    "invitee": {
+      "$oid": "5f3b8f182b501a2c7044f238"
+    },
+    "_state": "accepted",
+    "_createdAt": {
+      "$date": "2020-08-19T05:26:40.006Z"
+    },
+    "_editor": {
+      "$oid": "5f3b70c7520296397c9acd0d"
+    },
+    "_updatedAt": {
+      "$date": "2020-08-19T05:26:46.896Z"
+    },
+    "_transiting": null
+  },
+  {
+    "_id": {
+      "$oid": "5f3cbd34fdcb98193cd1dc45"
+    },
+    "_class": "friend",
+    "_creator": {
+      "$oid": "5f3b8f182b501a2c7044f236"
+    },
+    "inviter": {
+      "$oid": "5f3b8f182b501a2c7044f238"
+    },
+    "invitee": {
+      "$oid": "5f3b6b5c520296397c9accfa"
+    },
+    "_state": "accepted",
+    "_createdAt": {
+      "$date": "2020-08-19T05:48:36.904Z"
+    },
+    "_editor": {
+      "$oid": "5f3b8f182b501a2c7044f236"
+    },
+    "_updatedAt": {
+      "$date": "2020-08-19T05:48:54.883Z"
+    },
+    "_transiting": null
+  }
+]

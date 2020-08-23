@@ -1,0 +1,148 @@
+{
+  "abstract": false,
+  "description": "Контент создаваемый участниками",
+  "header": ".title",
+  "label": "Тост",
+  "attrs": [
+    {
+      "name": "title",
+      "label": "Заголовок",
+      "type": "string",
+      "commonSearchable": true,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 10,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": true,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "content",
+      "label": "Содержание",
+      "type": "text",
+      "commonSearchable": true,
+      "createOnRead": false,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 20,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "author",
+      "label": "Автор",
+      "type": "ref",
+      "viewType": "relationSelect",
+      "commands": [
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": "$user.meta.base.member",
+      "eagerLoading": true,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "onDelete": "null",
+      "orderNumber": 30,
+      "sortable": false,
+      "sortableRelation": false,
+      "refClass": "member",
+      "readOnly": true,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    },
+    {
+      "name": "access",
+      "label": "Доступ",
+      "type": "string",
+      "viewType": "radioList",
+      "description": "Определяет доступность тоста для других участников",
+      "commonSearchable": false,
+      "createOnRead": false,
+      "defaultValue": "none",
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": false,
+      "orderNumber": 40,
+      "sortable": false,
+      "sortableRelation": false,
+      "readOnly": false,
+      "required": true,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false,
+      "enums": [
+        {
+          "items": [
+            {
+              "value": "none",
+              "text": "Нет",
+              "hint": "Никому кроме автора",
+              "orderNumber": 10
+            },
+            {
+              "value": "friends",
+              "text": "Друзья",
+              "hint": "Только друзьям",
+              "orderNumber": 20
+            },
+            {
+              "value": "all",
+              "text": "Все",
+              "hint": "Для всех участников",
+              "orderNumber": 30
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "comments",
+      "label": "Комментарии",
+      "type": "backref",
+      "commands": [
+        "create",
+        "edit"
+      ],
+      "commonSearchable": false,
+      "createOnRead": true,
+      "eagerLoading": false,
+      "escape": true,
+      "hidden": false,
+      "history": false,
+      "multiple": true,
+      "orderNumber": 50,
+      "sortable": false,
+      "sortableRelation": false,
+      "refAttr": "toast",
+      "refClass": "comment",
+      "readOnly": false,
+      "required": false,
+      "selectSearchable": false,
+      "trim": true,
+      "unique": false
+    }
+  ]
+}

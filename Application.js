@@ -2,7 +2,7 @@
 
 const Base = require('evado/Application');
 
-module.exports = class BoilerplateApplication extends Base {
+module.exports = class PartyApplication extends Base {
     
     constructor (config) {
         super({

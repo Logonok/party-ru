@@ -1,0 +1,42 @@
+<div class="new-comment-modal modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" data-t="">New comment</h4>
+            </div>
+            <div class="modal-body">
+                <div class="modal-error alert-danger alert hidden"></div>
+                <div class="loadable-container" data-handler="NewComment">
+
+                    <template data-id="comment">
+                        <div class="form-horizontal form" data-handler="Form">
+                            <div class="form-attr form-group required">
+                                <label class="col-md-3 control-label" data-t="meta.class.comment">Text</label>
+                                <div class="col-md-9">
+                                    <textarea name="text" class="form-control" rows="4" autofocus></textarea>
+                                    <div class="error-block"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template data-id="error">
+                        <div class="alert-danger alert">{{text}}</div>
+                    </template>
+
+                    <div class="loadable-content"></div>
+                    <div class="loader"><i class="fa fa-spinner fa-spin"></i></div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-success btn" data-command="create">
+                    <span data-t="">Create</span>
+                </button>
+                <button class="btn-default btn" data-dismiss="modal">
+                    <span data-t="">Close</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

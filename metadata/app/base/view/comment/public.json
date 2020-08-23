@@ -1,0 +1,21 @@
+{
+  "label": "Публичные комментарии",
+  "description": "Представление комментария для гостевого доступа",
+  "readOnly": true,
+  "attrs": [
+    {
+      "name": "text",
+      "orderNumber": 20
+    },
+    {
+      "name": "author",
+      "eagerLoading": true,
+      "eagerView": "public",
+      "orderNumber": 30
+    },
+    {
+      "name": "_createdAt",
+      "orderNumber": 40
+    }
+  ]
+}

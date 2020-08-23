@@ -1,0 +1,32 @@
+{
+  "label": "Редактирование",
+  "description": "Представление редактирования объекта",
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "user",
+      "orderNumber": 20,
+      "readOnly": true
+    },
+    {
+      "name": "toasts",
+      "orderNumber": 30
+    },
+    {
+      "name": "inviters",
+      "orderNumber": 40
+    },
+    {
+      "name": "invitees",
+      "orderNumber": 50
+    },
+    {
+      "name": "friends",
+      "orderNumber": 60
+    }
+  ]
+}

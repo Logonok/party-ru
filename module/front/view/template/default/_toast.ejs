@@ -1,0 +1,36 @@
+
+<div class="page" data-page="toast" data-handler="ToastPage">
+
+    <div class="toast loadable-container" data-handler="Toast">
+
+        <template data-id="toast">
+            <div class="page-head">
+                <ol class="breadcrumb">
+                    <li><a href="#" data-action="main" data-t="">Домой</a></li>
+                    <li data-t="">Тост</li>
+                </ol>
+            </div>
+
+            <h1>{{title}}</h1>
+
+            <div class="toast-content">
+                {{content}}
+                <div class="toast-author">
+                    Автор:
+                    <a href="#" data-action="member" data-id="{{authorId}}">{{authorTitle}}</a>
+                </div>
+            </div>
+
+            <h3 class="block-title">Комментарии</h3>
+            <%- include('./_toastComments') %>
+
+        </template>
+
+        <template data-id="error">
+            <div class="alert-danger alert">{{text}}</div>
+        </template>
+
+        <div class="loadable-content"></div>
+        <div class="loader"><i class="fa fa-spinner fa-spin"></i></div>
+    </div>
+</div>

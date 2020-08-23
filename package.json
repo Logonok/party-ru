@@ -1,15 +1,15 @@
 {
-  "name": "evado-app-boilerplate",
-  "version": "1.7.1",
-  "description": "Evado Boilerplate Application",
-  "author": "Maxim Khorin",
+  "name": "party-ru",
+  "version": "1.0.0",
+  "description": "Evado Party Application",
+  "author": "Logonok",
   "license": "MIT",
   "engines": {
     "node": ">=12.16.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mkhorin/evado-app-boilerplate.git"
+    "url": "https://github.com/logonok/party-ru.git"
   },
   "dependencies": {
     "evado": "~1.7.1",

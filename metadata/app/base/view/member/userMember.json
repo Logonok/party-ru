@@ -1,0 +1,18 @@
+{
+  "label": "Мой участник",
+  "description": "Участник, привязанный к текущему системному пользователю",
+  "filter": {
+    "user": "$user"
+  },
+  "readOnly": false,
+  "attrs": [
+    {
+      "name": "name",
+      "orderNumber": 10
+    },
+    {
+      "name": "user",
+      "orderNumber": 20
+    }
+  ]
+}

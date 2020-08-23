@@ -19,8 +19,8 @@ const params = Console.parseProcessArguments();
             await instance.createNotices();
             await instance.createEventHandlers();
             await instance.createListeners();
-            // await instance.importData({oneByOne: false});
-            // await instance.importStudioData();
+            await instance.importData({oneByOne: false});
+            await instance.importStudioData();
         });
     } catch (err) {
         console.error(err);
