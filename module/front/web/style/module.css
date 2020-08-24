@@ -276,6 +276,9 @@ legend {
     font-size: 16px;
     margin: 0;
 }
+.toast-items .toast-card {
+    margin-bottom: 0;
+}
 @media (max-width: 768px) {
     .toast-items {
         grid-template-columns: repeat(1, 1fr);

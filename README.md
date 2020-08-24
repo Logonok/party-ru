@@ -5,7 +5,7 @@
 
 - [Декларативный фреймворк Evado](https://github.com/mkhorin/evado)
 
-## Установка
+## Типовая установка
 
 #### Установите окружение
 - [Node.js](https://nodejs.org)
@@ -55,3 +55,14 @@ Password: 123456
 Email: b@b.b
 Password: 123456
 ```
+
+## Установка через Docker
+
+Клонируйте приложение в /app
+```sh
+cd /app
+docker-compose up -d mongo
+docker-compose up --build installer
+docker-compose up -d server
+```
+Веб-интерфейс: **http://localhost:3000**
