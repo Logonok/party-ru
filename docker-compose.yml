@@ -33,3 +33,25 @@ services:
       - mongo
     command:
        node console/docker
+
+  demoInstaller:
+    build: .
+    image: evado-app-party-ru
+    environment:
+      - MONGO_HOST=mongo
+      - WAIT_HOSTS=mongo:27017
+    depends_on:
+      - mongo
+    command:
+       node console/install --config demo
+
+  demoServer:
+    image: evado-app-party-ru
+    ports:
+      - 80:3000
+    environment:
+      - MONGO_HOST=mongo
+    depends_on:
+      - mongo
+    command:
+       node console/docker --config demo

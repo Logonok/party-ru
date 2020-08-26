@@ -1,0 +1,9 @@
+<!-- app/_part/other/alert -->
+
+<% if (_module.app.isDemo()) { %>
+<div class="alert-info alert">
+    Приложение работает в демонстрационном режиме. Изменение данных заблокировано.
+</div>
+<% } %>
+
+<%- include(_view.get('_part/other/flash')) %>

@@ -11,5 +11,8 @@ module.exports = class PartyApplication extends Base {
         });
     }
 
+    isDemo () {
+        return this.configName === 'demo';
+    }
 };
 module.exports.init(module);
