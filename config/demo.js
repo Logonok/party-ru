@@ -16,6 +16,8 @@ module.exports = {
     security: require('./demo-security'),
     params: {
         'enablePasswordChange': false,
-        'enableSignUp': false
+        'enableSignUp': false,
+        'static': {options: {maxAge: 60 * 60 * 1000}},
+        'serverAddress': 'http://localhost:3000'
     }
 };
