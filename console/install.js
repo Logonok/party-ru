@@ -21,6 +21,7 @@ const instance = new Console({Application, params});
             await instance.createListeners();
             await instance.importData({oneByOne: false});
             await instance.importStudioData();
+            await instance.createIndexes();
         });
     } catch (err) {
         console.error(err);
