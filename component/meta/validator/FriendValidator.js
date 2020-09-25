@@ -12,7 +12,7 @@ module.exports = class FriendValidator extends Base {
             model.get('inviter'),
             model.get('invitee')
         ];
-        const id = await model.class.find().and({
+        const id = await model.class.find({
             inviter: members,
             invitee: members
         }).id();

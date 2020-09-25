@@ -1,7 +1,7 @@
 {
   "name": "party-ru",
-  "version": "1.1.0",
-  "description": "Evado Party Application",
+  "version": "1.2.1",
+  "description": "Evado Party Social Network",
   "author": "Logonok",
   "license": "MIT",
   "engines": {
@@ -12,16 +12,16 @@
     "url": "https://github.com/logonok/party-ru.git"
   },
   "dependencies": {
-    "evado": "~1.7.3",
-    "evado-api-base": "~1.7.1",
+    "evado": "~1.8.0",
+    "evado-api-base": "~1.8.0",
     "evado-api-navigation": "~1.6.1",
-    "evado-meta-base": "~1.7.1",
+    "evado-meta-base": "~1.8.0",
     "evado-meta-navigation": "~1.6.0",
     "evado-module-account": "~1.6.1",
-    "evado-module-admin": "~1.7.2",
-    "evado-module-office": "~1.7.2",
-    "evado-module-studio": "~1.7.2",
-    "sharp": "0.24.1"
+    "evado-module-admin": "~1.8.0",
+    "evado-module-office": "~1.8.0",
+    "evado-module-studio": "~1.8.0",
+    "sharp": "~0.26.0"
   },
   "scripts": {
     "start": "node console/start"

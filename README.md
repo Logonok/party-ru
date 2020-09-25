@@ -1,9 +1,7 @@
-# Evado Party App
+# Evado Party
 
-Демонстрационное веб-приложение социальной сети,
-созданное на фреймворке Evado.
-
-- [Декларативный фреймворк Evado](https://github.com/mkhorin/evado)
+Веб-приложение социальной сети,
+созданное на [декларативном фреймворке Evado](https://github.com/mkhorin/evado).
 
 ## Типовая установка
 
@@ -17,6 +15,7 @@
 cd /app
 npm install
 NODE_ENV=development node console/install
+NODE_ENV=development node console/start
 ```
 
 #### Windows
@@ -26,34 +25,7 @@ cd c:/app
 npm install
 set NODE_ENV=development
 node console/install
-```
-
-## Запуск
-
-#### Linux
-```sh
-cd /app
-NODE_ENV=development node console/start
-```
-
-#### Windows
-```sh
-cd c:/app
-set NODE_ENV=development
 node console/start
-```
- 
-Веб-интерфейс: **http://localhost:3000**
-
-Войти как администратор:
-```sh
-Email: a@a.a
-Password: 123456
-```
-Войти как участник:
-```sh
-Email: b@b.b
-Password: 123456
 ```
 
 ## Установка через Docker
@@ -65,4 +37,18 @@ docker-compose up -d mongo
 docker-compose up --build installer
 docker-compose up -d server
 ```
+
+## Использование
+
 Веб-интерфейс: **http://localhost:3000**
+
+Войти как участник вечеринки:
+```sh
+Email: b@b.b
+Password: 123456
+```
+Войти как администратор:
+```sh
+Email: a@a.a
+Password: 123456
+```

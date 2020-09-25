@@ -32,6 +32,6 @@ module.exports = class CommentRule extends Base {
                 author: friends
             });
         }
-        return this.getBaseMeta().getClass('toast').find().and(condition).ids();
+        return this.getBaseMeta().getClass('toast').find(condition).ids();
     }
 };
