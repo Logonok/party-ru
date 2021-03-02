@@ -1,18 +1,13 @@
 <%
 layout(_view.get('_layout/content'));
 
-script('front/script/Front.js');
-script('front/script/Form.js');
-script('front/script/Page.js');
-script('front/script/Member.js');
-script('front/script/Toast.js');
-script('front/script/Comment.js');
+script('front/vendor/front.min.js');
 script('front/script/module.js');
 
 const dataUrl = _url('/api/base/data/');
 const metaUrl = _url('/api/base/meta/');
 %>
-<div class="signboard">
+<div class="signboard alert-warning alert">
     Модуль демонстрирует доступ к функционалу и данным приложения через AJAX-запросы
     для создания индивидуальных веб-интерфейсов.
 </div>

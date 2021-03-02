@@ -1,30 +1,5 @@
-'use strict';
 
-Front.Member = class Member extends Front.LoadableContent {
-
-    getUrl () {
-        return super.getUrl('read');
-    }
-
-    getPostData () {
-        return {
-            class: 'member',
-            view: 'public',
-            id: this.id
-        };
-    }
-
-    render (data) {
-        return this.resolveTemplate('member', data);
-    }
-
-    renderError () {
-        const text = super.renderError(...arguments);
-        return this.resolveTemplate('error', {text});
-    }
-};
-
-Front.MemberList = class MemberList extends Front.LoadableContent {
+Front.MemberList = class MemberList extends Front.Loadable {
 
     constructor () {
         super(...arguments);
@@ -59,18 +34,18 @@ Front.MemberList = class MemberList extends Front.LoadableContent {
 
     onDone (data) {
         super.onDone(data);
-        this.pagination.setTotal(data && data.totalSize);
+        this.pagination.setTotal(data?.totalSize);
         this.$content.append(this.pagination.render());
-        this.translateContainer();
+        Jam.t(this.$container);
     }
 
     render (data) {
-        let items = data && data.items;
+        let items = data?.items;
         items = Array.isArray(items) ? items : [];
         items = items.map(this.renderItem, this).join('');
         return items
             ? this.resolveTemplate('list', {items})
-            : this.resolveTemplate('warning', {text: Jam.i18n.translate(this.noItemsFound)});
+            : this.resolveTemplate('warning', {text: Jam.t(this.noItemsFound)});
     }
 
     renderItem (data) {

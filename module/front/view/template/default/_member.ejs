@@ -6,22 +6,18 @@
         <template data-id="member">
             <div class="page-head">
                 <ol class="breadcrumb">
-                    <li><a href="#" data-action="main" data-t="">Домой</a></li>
-                    <li data-t="">Участник</li>
+                    <li class="breadcrumb-item"><a href="#" data-action="main" data-t="">Домой</a></li>
+                    <li class="breadcrumb-item" data-t="">Участник</li>
                 </ol>
             </div>
 
             <h1>{{name}}</h1>
 
-            <div class="tabs form-tabs mt40" data-id="tabs">
-                <ul class="nav nav-tabs" role="tablist">
-                    <li class="nav-tab active" data-id="toasts">
-                        <a href="#" data-t="">Тосты</a>
-                    </li>
-                    <li class="nav-tab" data-id="friends">
-                        <a href="#" data-t="">Друзья</a>
-                    </li>
-                </ul>
+            <div class="tabs form-tabs mt-4" data-id="tabs">
+                <div class="nav nav-tabs" role="tablist">
+                    <a class="nav-item nav-link active" href="#" role="tab" data-id="toasts" data-t="">Тосты</a>
+                    <a class="nav-item nav-link" href="#" role="tab" data-id="friends" data-t="">Друзья</a>
+                </div>
                 <div class="tab-content">
                     <div class="form-base-group tab-pane active" data-id="toasts">
                         <%- include('./_memberToasts') %>

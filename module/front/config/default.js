@@ -2,5 +2,7 @@
 
 module.exports = {
 
-    title: 'Front'
+    title: 'Front',
+
+    assets: require('./default-assets')
 };

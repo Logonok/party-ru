@@ -14,11 +14,25 @@ module.exports = class AdminModule extends Base {
                         controllers: ['log', 'table']
                     }, {
                         allow: true,
-                        actions: ['index', 'create', 'update', 'select', 'permissions', 'roles', 'update-permission', 'update-role'],
-                        methods: ['GET']
+                        actions: [
+                            'index',
+                            'create',
+                            'update',
+                            'select',
+                            'permissions',
+                            'roles',
+                            'updatePermission',
+                            'updateRole'
+                        ],
+                        methods: ['get']
                     }, {
                         allow: true,
-                        actions: ['list', 'list-related', 'list-permission', 'list-role']
+                        actions: [
+                            'list',
+                            'listRelated',
+                            'listPermission',
+                            'listRole'
+                        ]
                     }, {
                         allow: false
                     }]

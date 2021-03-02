@@ -1,7 +1,9 @@
 /.hg/*
 /.idea/*
 
-config/*.local.js
+**/asset/dist/
+**/config/*.local.js
+**/web/vendor/
 
 /data/*
 !/data/default/
@@ -11,7 +13,6 @@ config/*.local.js
 
 /log/
 /upload/
-/web/vendor/
 
 # Logs
 *.log

@@ -1,6 +1,5 @@
-'use strict';
 
-Front.CommentList = class CommentList extends Front.LoadableContent {
+Front.CommentList = class CommentList extends Front.Loadable {
 
     init () {
         super.init();
@@ -31,7 +30,7 @@ Front.CommentList = class CommentList extends Front.LoadableContent {
     }
 
     render (data) {
-        let items = data && data.items;
+        let items = data?.items;
         items = Array.isArray(items) ? items : [];
         items = items.map(this.renderItem, this).join('') || this.resolveTemplate('empty');
         return this.resolveTemplate('list', {items});

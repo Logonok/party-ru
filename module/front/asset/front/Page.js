@@ -1,4 +1,3 @@
-'use strict';
 
 Front.Page = class Page extends Front.Element {
 

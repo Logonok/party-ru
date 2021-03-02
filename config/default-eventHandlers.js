@@ -6,7 +6,7 @@ module.exports = {
         label: 'Создание участника',
         description: 'Создать объект Участника',
         config: {
-            Class: 'evado/component/handler/MetaClassInstantiation',
+            Class: 'evado/component/handler/MetadataClassInstantiation',
             className: 'member'
         }
     }

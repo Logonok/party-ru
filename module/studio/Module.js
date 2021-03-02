@@ -15,10 +15,10 @@ module.exports = class StudioModule extends Base {
                     }, {
                         allow: true,
                         actions: ['index', 'create', 'update', 'select'],
-                        methods: ['GET']
+                        methods: ['get']
                     }, {
                         allow: true,
-                        actions: ['list', 'list-related']
+                        actions: ['list', 'listRelated']
                     }, {
                         allow: false
                     }]
