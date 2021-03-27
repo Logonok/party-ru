@@ -63,6 +63,7 @@ module.exports = {
     users: require('./default-users'),
     userFilters: require('./default-userFilters'),
     security: require('./default-security'),
+    sideMenu: require('./default-sideMenu'),
     notifications: require('./default-notifications'),
     tasks: require('./default-tasks'),
     utilities: require('./default-utilities'),
