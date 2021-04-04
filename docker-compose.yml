@@ -54,4 +54,4 @@ services:
     depends_on:
       - mongo
     command:
-       node console/docker --config demo
+       node console/docker --config demo --env production
