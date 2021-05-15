@@ -93,9 +93,6 @@ body {
 
 .breadcrumb {
     padding-right: 145px;
-    border-left: 2px solid #3c8dbc;
-    border-radius: 0;
-    background: #eff;
 }
 .breadcrumb + h1 {
     margin-top: 2rem;
