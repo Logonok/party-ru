@@ -19,7 +19,7 @@ module.exports = {
             type: 'class',
             class: 'member'
         },
-        rule: 'creator'
+        rules: 'creator'
     }, {
         description: 'Управлять собственными тостами',
         roles: 'user',
@@ -29,7 +29,7 @@ module.exports = {
             type: 'class',
             class: 'toast'
         },
-        rule: 'creator'
+        rules: 'creator'
     }, {
         description: 'Просматривать тосты, к которым есть доступ',
         roles: 'user',
@@ -39,7 +39,7 @@ module.exports = {
             type: 'class',
             class: 'toast'
         },
-        rule: 'toast'
+        rules: 'toast'
     }, {
         description: 'Управлять собственными комментариями',
         roles: 'user',
@@ -49,7 +49,7 @@ module.exports = {
             type: 'class',
             class: 'comment'
         },
-        rule: 'creator'
+        rules: 'creator'
     }, {
         description: 'Читать и создавать комментарии к тостам, к которым есть доступ',
         roles: 'user',
@@ -59,7 +59,7 @@ module.exports = {
             type: 'class',
             class: 'comment'
         },
-        rule: 'comment'
+        rules: 'comment'
     }, {
         description: 'Просматривать участников и друзей',
         roles: 'user',
@@ -78,17 +78,17 @@ module.exports = {
             type: 'class',
             class: 'friend'
         },
-        rule: 'creator'
+        rules: 'creator'
     }, {
         description: 'Изменять дружбу, если являешься приглашенным участником',
         roles: 'user',
         type: 'allow',
         actions: 'update',
         targets: {
-            type: 'class',
+            type: 'transition',
             class: 'friend'
         },
-        rule: 'invitee'
+        rules: 'invitee'
     }, {
         description: 'Просматривать объекты под гостевой ролью',
         roles: 'guest',

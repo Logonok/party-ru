@@ -11,8 +11,8 @@
 ## Типовая установка
 
 #### Установите окружение
-- [Node.js](https://nodejs.org) (version 14)
-- [MongoDB](https://www.mongodb.com/download-center/community) (version 4)
+- [Node.js](https://nodejs.org) (версия 16)
+- [MongoDB](https://www.mongodb.com/download-center/community) (версия 4)
 
 #### Linux
 Клонируйте приложение в /app
