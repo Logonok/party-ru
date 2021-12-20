@@ -1,23 +1,53 @@
 <%
 layout(_view.get('_layout/content'));
 
-script('front/vendor/front.min.js');
-script('front/script/module.js');
+script('front/vendor/vue/vue.js');
 
-const dataUrl = _url('/api/base/data/');
-const metaUrl = _url('/api/base/meta/');
+script('front/script/modelForm.js');
+script('front/script/commentForm.js');
+
+script('front/script/breadcrumbs.js');
+script('front/script/comments.js');
+script('front/script/member.js');
+script('front/script/memberFriends.js');
+script('front/script/memberToasts.js');
+script('front/script/mixin.js');
+script('front/script/modalDialog.js');
+script('front/script/modelFormAttr.js');
+script('front/script/modelFormText.js');
+script('front/script/pagination.js');
+script('front/script/tabs.js');
+script('front/script/toast.js');
+script('front/script/toasts.js');
+
+script('front/script/front.js');
+
+const user = _controller.user;
 %>
-<div class="signboard alert-warning alert">
-    Модуль демонстрирует доступ к функционалу и данным приложения через AJAX-запросы
-    для создания пользовательских веб-интерфейсов.
-</div>
-<div class="front"
-     data-guest="<%- _controller.user.isGuest() %>"
-     data-user="<%- _controller.user.getId() %>"
-     data-data-url="<%- dataUrl %>"
-     data-meta-url="<%- metaUrl %>">
 
-    <%- include('./_main') %>
-    <%- include('./_member') %>
-    <%- include('./_toast') %>
+<%- include('./_breadcrumbs') %>
+<%- include('./_comments') %>
+<%- include('./_member') %>
+<%- include('./_memberFriends') %>
+<%- include('./_memberToasts') %>
+<%- include('./_modalDialog') %>
+<%- include('./_modelForm') %>
+<%- include('./_modelFormText') %>
+<%- include('./_pagination') %>
+<%- include('./_tabs') %>
+<%- include('./_toast') %>
+<%- include('./_toasts') %>
+
+<%- include(_view.get('_part/signboard')) %>
+
+<div id="front"
+     data-user-id="<%- user.getId() %>"
+     data-auth-url="<%- _url('/auth/sign-in?returnUrl=/front') %>"
+     data-data-url="<%- _url('/api/base/data') %>"
+     data-meta-url="<%- _url('/api/base/meta') %>"
+     data-csrf="<%- _controller.getCsrfToken() %>">
+
+    <keep-alive>
+        <componen :is="activePage" v-bind="activePageProps"></componen>
+    </keep-alive>
 </div>

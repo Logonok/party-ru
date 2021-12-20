@@ -1,35 +1,23 @@
+<template id="member-friends">
+    <div class="loadable-container">
 
-<div class="friend-list loadable-container" data-handler="MemberFriendList" data-member="{{_id}}">
-
-    <template data-id="list">
-        <div class="friend-items">##items##</div>
-    </template>
-
-    <template data-id="item">
-        <div class="friend-card" data-id="##_id##">
-            <div class="friend-title">
-                <span class="fas fa-user text-success"></span>
-                <a href="#" data-action="member">##name##</a>
+        <div class="friend-items">
+            <div v-for="item of items" :key="item.key" class="friend-card">
+                <div class="friend-title">
+                    <span class="fas fa-user text-success"></span>
+                    <a @click.prevent="toMember(item.id)" href="#">{{item.name}}</a>
+                </div>
             </div>
         </div>
-    </template>
 
-    <%- include('./_pagination', {start: '##', end: '##'}) %>
+        <pagination></pagination>
 
-    <template data-id="empty">
-        <div class="alert-warning alert">
-            <span data-t="">Друзей не найдено</span>
+        <div v-show="!loading && empty" class="alert-warning alert">
+            <span>Друзья не найдены</span>
         </div>
-    </template>
 
-    <template data-id="warning">
-        <div class="alert-warning alert">##text##</div>
-    </template>
-
-    <template data-id="error">
-        <div class="alert-danger alert">##text##</div>
-    </template>
-
-    <div class="loadable-content"></div>
-    <div class="loader"><i class="fa fa-spinner fa-spin"></i></div>
-</div>
+        <div v-show="loading" class="loader">
+            <i class="fa fa-spinner fa-spin"></i>
+        </div>
+    </div>
+</template>

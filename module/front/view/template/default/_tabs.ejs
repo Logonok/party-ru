@@ -1,0 +1,19 @@
+<template id="tabs">
+    <div class="tabs form-tabs mt-4">
+        <div class="nav nav-tabs" role="tablist">
+            <template v-for="(item, index) of items">
+                <a :class="{'active': index === activeIndex, 'nav-item nav-link': true}"
+                   @click.prevent="onTab(index)" href="#">
+                    {{item}}
+                </a>
+            </template>
+        </div>
+        <div class="tab-content">
+            <template v-for="(item, index) of items">
+                <div v-if="index === activeIndex" class="active tab-pane model-group">
+                    <slot :name="index"></slot>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

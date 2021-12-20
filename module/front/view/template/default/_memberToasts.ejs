@@ -1,35 +1,23 @@
+<template id="member-toasts">
+    <div class="loadable-container">
 
-<div class="toast-list loadable-container" data-handler="MemberToastList" data-member="{{_id}}">
-
-    <template data-id="list">
-        <div class="toast-items">##items##</div>
-    </template>
-
-    <template data-id="item">
-        <div class="toast-card" data-id="##_id##">
-            <div class="toast-title">
-                <span class="fas fa-glass-martini-alt text-info"></span>
-                <a href="#" data-action="toast">##title##</a>
+        <div class="toast-items">
+            <div v-for="item of items" :key="item.id" class="toast-card">
+                <div class="toast-title">
+                    <span class="fas fa-glass-martini-alt text-info"></span>
+                    <a @click.prevent="toToast(item.id)" href="#">{{item.title}}</a>
+                </div>
             </div>
         </div>
-    </template>
 
-    <%- include('./_pagination', {start: '##', end: '##'}) %>
+        <pagination></pagination>
 
-    <template data-id="empty">
-        <div class="alert-warning alert">
-            <span data-t="">Нет тостов</span>
+        <div v-show="!loading && empty" class="alert-warning alert">
+            <span>Тосты не найдены</span>
         </div>
-    </template>
 
-    <template data-id="warning">
-        <div class="alert-warning alert">##text##</div>
-    </template>
-
-    <template data-id="error">
-        <div class="alert-danger alert">##text##</div>
-    </template>
-
-    <div class="loadable-content"></div>
-    <div class="loader"><i class="fa fa-spinner fa-spin"></i></div>
-</div>
+        <div v-show="loading" class="loader">
+            <i class="fa fa-spinner fa-spin"></i>
+        </div>
+    </div>
+</template>
