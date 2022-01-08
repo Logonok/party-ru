@@ -14,7 +14,7 @@ module.exports = class FriendMembers extends Base {
         const friendClass = member.class.meta.getClass('friend');
         const friendQuery = friendClass.find()
             .and({_state: 'accepted'})
-            .and(['OR', {inviter: memberId}, {invitee: memberId}]);
+            .and(['or', {inviter: memberId}, {invitee: memberId}]);
         const items = await friendQuery.raw().all();
         const memberIds = [];
         for (const item of items) {

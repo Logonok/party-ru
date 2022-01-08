@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <pagination></pagination>
+        <pagination @change="load"></pagination>
 
         <div v-show="!loading && empty" class="alert-warning alert">Комментарии не найдены</div>
 

@@ -25,7 +25,7 @@ module.exports = class CommentRule extends Base {
     }
 
     getToastIds (friends) {
-        const condition = ['OR', {access: 'all'}];
+        const condition = ['or', {access: 'all'}];
         if (friends.length) {
             condition.push({
                 access: 'friends',
