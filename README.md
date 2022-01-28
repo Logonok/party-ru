@@ -8,6 +8,16 @@
 Простая социальная сеть для общения гостей на виртуальной вечеринке.
 Зарегистрированные пользователи могут заводить друзей, провозглашать тосты, обсуждать и делиться ими с другими участниками.
 
+## Установка через Docker
+
+Скопируйте приложение в `/app`
+```sh
+cd /app
+docker-compose up -d mongo
+docker-compose up --build installer
+docker-compose up -d server
+```
+
 ## Типовая установка
 
 #### Установите окружение
@@ -15,7 +25,7 @@
 - [MongoDB](https://www.mongodb.com/download-center/community) (версия 4)
 
 #### Linux
-Клонируйте приложение в /app
+Скопируйте приложение в `/app`
 ```sh
 cd /app
 npm install
@@ -24,7 +34,7 @@ NODE_ENV=development node console/start
 ```
 
 #### Windows
-Клонируйте приложение в c:/app
+Скопируйте приложение в `c:/app`
 ```sh
 cd c:/app
 npm install
@@ -33,19 +43,9 @@ node console/install
 node console/start
 ```
 
-## Установка через Docker
-
-Клонируйте приложение в /app
-```sh
-cd /app
-docker-compose up -d mongo
-docker-compose up --build installer
-docker-compose up -d server
-```
-
 ## Использование
 
-Веб-интерфейс: **http://localhost:3000**
+Веб-интерфейс `http://localhost:3000`
 
 Войти как участник вечеринки:
 ```sh
