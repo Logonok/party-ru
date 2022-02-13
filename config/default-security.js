@@ -201,6 +201,6 @@ module.exports = {
     },
 
     // правила автоматической привязки пользователей к ролям
-    assignmentRules: {        
+    assignmentRules: {
     }
 };
