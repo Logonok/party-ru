@@ -22,7 +22,7 @@ docker-compose up -d server
 
 #### Установите окружение
 - [Node.js](https://nodejs.org) (версия 16)
-- [MongoDB](https://www.mongodb.com/download-center/community) (версия 4)
+- [MongoDB](https://www.mongodb.com/download-center/community) (версия 5)
 
 #### Linux
 Скопируйте приложение в `/app`
