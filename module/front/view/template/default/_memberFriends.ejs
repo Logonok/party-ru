@@ -1,23 +1,23 @@
 <template id="member-friends">
-    <div class="loadable-container">
+  <div class="loadable-container">
 
-        <div class="friend-items">
-            <div v-for="item of items" :key="item.key" class="friend-card">
-                <div class="friend-title">
-                    <span class="fas fa-user text-success"></span>
-                    <a @click.prevent="toMember(item.id)" href="#">{{item.name}}</a>
-                </div>
-            </div>
+    <div class="friend-items">
+      <div v-for="item of items" :key="item.key" class="friend-card">
+        <div class="friend-title">
+          <span class="fas fa-user text-success"></span>
+          <a @click.prevent="toMember(item.id)" href="#">{{item.name}}</a>
         </div>
-
-        <pagination @change="load"></pagination>
-
-        <div v-show="!loading && empty" class="alert-warning alert">
-            <span>Друзья не найдены</span>
-        </div>
-
-        <div v-show="loading" class="loader">
-            <i class="fa fa-spinner fa-spin"></i>
-        </div>
+      </div>
     </div>
+
+    <pagination @change="load"></pagination>
+
+    <div v-show="!loading && empty" class="alert-warning alert">
+      <span>Друзья не найдены</span>
+    </div>
+
+    <div v-show="loading" class="loader">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+  </div>
 </template>

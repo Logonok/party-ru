@@ -1,37 +1,37 @@
 <template id="toast">
-    <div class="page">
+  <div class="page">
 
-        <breadcrumbs>
-            <template #path>
-                <li class="breadcrumb-item">
-                    <a @click.prevent="toMain" href="#">Главная</a>
-                </li>
-                <li class="breadcrumb-item">Тост</li>
-            </template>
-        </breadcrumbs>
+    <breadcrumbs>
+      <template #path>
+        <li class="breadcrumb-item">
+          <a @click.prevent="toMain" href="#">Главная</a>
+        </li>
+        <li class="breadcrumb-item">Тост</li>
+      </template>
+    </breadcrumbs>
 
-        <div class="loadable-container">
-            <template v-if="!loading && id">
+    <div class="loadable-container">
+      <template v-if="!loading && id">
 
-                <h1>{{title}}</h1>
+        <h1>{{title}}</h1>
 
-                <div class="toast-content">
-                    {{content}}
-                    <div class="toast-author">
-                        Автор:
-                        <a @click.prevent="toMember(author)" href="#">{{authorName}}</a>
-                    </div>
-                </div>
-
-                <h3 class="block-title">Комментарии</h3>
-
-                <comments :toast="toast" ref="comments"></comments>
-
-            </template>
-
-            <div v-if="loading" class="loader">
-                <i class="fa fa-spinner fa-spin"></i>
-            </div>
+        <div class="toast-content">
+          {{content}}
+          <div class="toast-author">
+            Автор:
+            <a @click.prevent="toMember(author)" href="#">{{authorName}}</a>
+          </div>
         </div>
+
+        <h3 class="block-title">Комментарии</h3>
+
+        <comments :toast="toast" ref="comments"></comments>
+
+      </template>
+
+      <div v-if="loading" class="loader">
+        <i class="fa fa-spinner fa-spin"></i>
+      </div>
     </div>
+  </div>
 </template>

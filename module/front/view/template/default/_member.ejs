@@ -1,33 +1,33 @@
 <template id="member">
-    <div class="page">
+  <div class="page">
 
-        <breadcrumbs>
-            <template #path>
-                <li class="breadcrumb-item">
-                    <a @click.prevent="toMain" href="#">Главная</a>
-                </li>
-                <li class="breadcrumb-item">Участник</li>
-            </template>
-        </breadcrumbs>
+    <breadcrumbs>
+      <template #path>
+        <li class="breadcrumb-item">
+          <a @click.prevent="toMain" href="#">Главная</a>
+        </li>
+        <li class="breadcrumb-item">Участник</li>
+      </template>
+    </breadcrumbs>
 
-        <div class="loadable-container">
-            <template v-if="!loading && id">
+    <div class="loadable-container">
+      <template v-if="!loading && id">
 
-                <h1>{{name}}</h1>
+        <h1>{{name}}</h1>
 
-                <tabs :items="['Тосты', 'Друзья']">
-                    <template #0>
-                        <member-toasts :member="member"></member-toasts>
-                    </template>
-                    <template #1>
-                        <member-friends :member="member"></member-friends>
-                    </template>
-                </tabs>
-            </template>
+        <tabs :items="['Тосты', 'Друзья']">
+          <template #0>
+            <member-toasts :member="member"></member-toasts>
+          </template>
+          <template #1>
+            <member-friends :member="member"></member-friends>
+          </template>
+        </tabs>
+      </template>
 
-            <div v-if="loading" class="loader">
-                <i class="fa fa-spinner fa-spin"></i>
-            </div>
-        </div>
+      <div v-if="loading" class="loader">
+        <i class="fa fa-spinner fa-spin"></i>
+      </div>
     </div>
+  </div>
 </template>

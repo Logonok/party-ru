@@ -1,35 +1,35 @@
 <template id="toasts">
-    <div class="page">
+  <div class="page">
 
-        <h1>Тосты</h1>
+    <h1>Тосты</h1>
 
-        <div class="loadable-container">
+    <div class="loadable-container">
 
-            <div class="toast-list">
-                <div class="row">
-                    <div v-for="item of items" class="col-md-6 col-lg-4">
-                        <div class="toast-card">
-                            <h3>
-                                <a @click.prevent="toToast(item.id)" href="#">{{item.title}}</a>
-                            </h3>
-                            <h4>
-                                Автор:
-                                <b>{{item.authorName}}</b>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
+      <div class="toast-list">
+        <div class="row">
+          <div v-for="item of items" class="col-md-6 col-lg-4">
+            <div class="toast-card">
+              <h3>
+                <a @click.prevent="toToast(item.id)" href="#">{{item.title}}</a>
+              </h3>
+              <h4>
+                Автор:
+                <b>{{item.authorName}}</b>
+              </h4>
             </div>
-
-            <pagination @change="load"></pagination>
-
-            <div v-show="!loading && empty" class="alert-warning alert">
-                <span>Тосты не найдены</span>
-            </div>
-
-            <div v-show="loading" class="loader">
-                <i class="fa fa-spinner fa-spin"></i>
-            </div>
+          </div>
         </div>
+      </div>
+
+      <pagination @change="load"></pagination>
+
+      <div v-show="!loading && empty" class="alert-warning alert">
+        <span>Тосты не найдены</span>
+      </div>
+
+      <div v-show="loading" class="loader">
+        <i class="fa fa-spinner fa-spin"></i>
+      </div>
     </div>
+  </div>
 </template>

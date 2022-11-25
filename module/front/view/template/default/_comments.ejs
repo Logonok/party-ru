@@ -1,36 +1,36 @@
 <template id="comments">
-    <div class="loadable-container">
+  <div class="loadable-container">
 
-        <div class="commands">
-            <button @click="onNew" type="button" class="btn btn-success">Новый</button>
-        </div>
-
-        <div class="comment-items">
-            <div v-for="item of items" class="comment-card">
-                <a @click.prevent="toMember(item.author)" href="#" class="comment-author">
-                    <span class="icon fa fa-user"></span>
-                    {{item.authorName}}
-                </a>
-                <div class="comment-date">{{item.date | datetime}}</div>
-                <div class="comment-text">{{item.text}}</div>
-            </div>
-        </div>
-
-        <pagination @change="load"></pagination>
-
-        <div v-show="!loading && empty" class="alert-warning alert">Комментарии не найдены</div>
-
-        <div v-show="loading" class="loader">
-            <i class="fa fa-spinner fa-spin"></i>
-        </div>
-
-        <modal-dialog ref="newModal" title="Новый комментарий" size="lg">
-            <template #body>
-                <comment-form ref="newForm"></comment-form>
-            </template>
-            <template #footer>
-                <button @click="onCreate" class="btn-success btn">Создать</button>
-            </template>
-        </modal-dialog>
+    <div class="commands">
+      <button @click="onNew" type="button" class="btn btn-success">Новый</button>
     </div>
+
+    <div class="comment-items">
+      <div v-for="item of items" class="comment-card">
+        <a @click.prevent="toMember(item.author)" href="#" class="comment-author">
+          <span class="icon fa fa-user"></span>
+          {{item.authorName}}
+        </a>
+        <div class="comment-date">{{item.date | datetime}}</div>
+        <div class="comment-text">{{item.text}}</div>
+      </div>
+    </div>
+
+    <pagination @change="load"></pagination>
+
+    <div v-show="!loading && empty" class="alert-warning alert">Комментарии не найдены</div>
+
+    <div v-show="loading" class="loader">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+
+    <modal-dialog ref="newModal" title="Новый комментарий" size="lg">
+      <template #body>
+        <comment-form ref="newForm"></comment-form>
+      </template>
+      <template #footer>
+        <button @click="onCreate" class="btn-success btn">Создать</button>
+      </template>
+    </modal-dialog>
+  </div>
 </template>

@@ -1,23 +1,23 @@
 <template id="member-toasts">
-    <div class="loadable-container">
+  <div class="loadable-container">
 
-        <div class="toast-items">
-            <div v-for="item of items" :key="item.id" class="toast-card">
-                <div class="toast-title">
-                    <span class="fas fa-glass-martini-alt text-info"></span>
-                    <a @click.prevent="toToast(item.id)" href="#">{{item.title}}</a>
-                </div>
-            </div>
+    <div class="toast-items">
+      <div v-for="item of items" :key="item.id" class="toast-card">
+        <div class="toast-title">
+          <span class="fas fa-glass-martini-alt text-info"></span>
+          <a @click.prevent="toToast(item.id)" href="#">{{item.title}}</a>
         </div>
-
-        <pagination @change="load"></pagination>
-
-        <div v-show="!loading && empty" class="alert-warning alert">
-            <span>Тосты не найдены</span>
-        </div>
-
-        <div v-show="loading" class="loader">
-            <i class="fa fa-spinner fa-spin"></i>
-        </div>
+      </div>
     </div>
+
+    <pagination @change="load"></pagination>
+
+    <div v-show="!loading && empty" class="alert-warning alert">
+      <span>Тосты не найдены</span>
+    </div>
+
+    <div v-show="loading" class="loader">
+      <i class="fa fa-spinner fa-spin"></i>
+    </div>
+  </div>
 </template>
